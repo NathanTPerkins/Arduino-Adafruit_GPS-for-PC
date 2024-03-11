@@ -22,6 +22,7 @@
 #endif
 #include "Adafruit_PMTK.h"
 #include "NMEA_data.h"
+#include <time.h>
 
 #ifdef USING_CSV
 #include <CSVParser.h>

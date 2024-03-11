@@ -74,7 +74,7 @@ Adafruit_GPS::~Adafruit_GPS(){
     }
     #endif
     this->_running = false;
-    this->puased = false;
+    this->paused = false;
 }
 
 bool Adafruit_GPS::begin(uint32_t baud_rate){
@@ -95,13 +95,13 @@ void Adafruit_GPS::common_init(){
 size_t Adafruit_GPS::available(){
     #ifdef USING_CSV
     if(this->sensor_data != nullptr){
-        return this->sensor_data->size();
+        return this->sensor_data->getSize();
     } 
     #endif
     return 1;
 }
 
-size_t Adafruit_GPS::write(uint8_c c){
+size_t Adafruit_GPS::write(uint8_t c){
     return 1;
 }
 
