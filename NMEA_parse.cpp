@@ -48,7 +48,7 @@ bool Adafruit_GPS::parseCoord(char *pStart, nmea_float_t *angleDegrees, nmea_flo
     return true;
 }
 
-char *Adafruit_GPS::parseStr(char *_buf, char *p, int n)_{
+char *Adafruit_GPS::parseStr(char *_buf, char *p, int n){
     snprintf(_buf, 2, "E");
     return _buf;
 }
