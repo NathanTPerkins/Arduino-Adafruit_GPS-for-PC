@@ -20,8 +20,8 @@
 #ifdef USE_SW_SERIAL
 #include <SoftwareSerial.h>
 #endif
-#include <Adafruit_PMTK.h>
-#include <NMEA_data.h>
+#include "Adafruit_PMTK.h"
+#include "NMEA_data.h"
 
 #ifdef USING_CSV
 #include <CSVParser.h>
@@ -44,7 +44,7 @@ typedef enum {
   NMEA_HAS_SENTENCE_P = 40 
 } nmea_check_t;
 
-class Adafruit_GPS : public Print {
+class Adafruit_GPS : /*public Print*/ {
 public:
     // Adafruit_GPS.cpp
     bool begin(uint32_t baud_or_i2caddr);

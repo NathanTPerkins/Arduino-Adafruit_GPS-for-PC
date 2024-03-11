@@ -16,11 +16,11 @@ nmea_float_t Adafruit_GPS::getSmoothed(nmea_index_t idx){
     return 0;
 }
 
-void Adafruit_GPS::initDataValue(nmea_index_t idx, char *_label, char *_fmt, char *_unit, unsinged long response, nmea_value_type_t type){
+void Adafruit_GPS::initDataValue(nmea_index_t idx, char *_label, char *_fmt, char *_unit, unsigned long response, nmea_value_type_t type){
 
 }
 
-nmea_history_t *Adafruit_GPS::initHistory(nmea_index_t idx, nmea_float_t scale, snmea_float_t offset, unsigned historyInterval, unsigned historyN){
+nmea_history_t *Adafruit_GPS::initHistory(nmea_index_t idx, nmea_float_t scale, nmea_float_t offset, unsigned historyInterval, unsigned historyN){
     return NULL;
 }
 
