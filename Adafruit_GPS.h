@@ -54,7 +54,7 @@ public:
     Adafruit_GPS(SoftwareSerial *ser, const char *); 
     #endif
     Adafruit_GPS(HardwareSerial *ser, const char *); 
-    Adafruit_GPS(const char *); 
+    Adafruit_GPS(const char * filename = NULL); 
     void common_init(void);
     virtual ~Adafruit_GPS();
 
