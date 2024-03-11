@@ -44,7 +44,7 @@ typedef enum {
   NMEA_HAS_SENTENCE_P = 40 
 } nmea_check_t;
 
-class Adafruit_GPS : /*public Print*/ {
+class Adafruit_GPS /*: public Print*/ {
 public:
     // Adafruit_GPS.cpp
     bool begin(uint32_t baud_or_i2caddr);
@@ -236,12 +236,12 @@ public:
     #endif
     bool noComms = false;
     HardwareSerial *gpsHwSerial;
-    Stream *gpsStream;
-    TwoWire *gpsI2C;
-    SPIClass *gpsSPI;
+    // Stream *gpsStream;
+    // TwoWire *gpsI2C;
+    // SPIClass *gpsSPI;
     int8_t gpsSPI_cs = -1;
-    SPISettings gpsSPI_settings =
-        SPISettings(1000000, MSBFIRST, SPI_MODE0); // default
+    // SPISettings gpsSPI_settings =
+    //     SPISettings(1000000, MSBFIRST, SPI_MODE0); // default
     char _spibuffer[GPS_MAX_SPI_TRANSFER]; // for when we write data, we need to
                                             // read it too!
     uint8_t _i2caddr;
